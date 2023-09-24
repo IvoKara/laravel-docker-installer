@@ -7,7 +7,7 @@ To start using the command line tool you will need to clone this repository and 
 ```bash
 git clone https://github.com/IvoKara/laravel-sail-installer.git
 cd laravel-sail-installer
-./install.sh
+./setup.sh
 ```
 
 And you are now ready to go!
