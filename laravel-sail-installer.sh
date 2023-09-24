@@ -15,7 +15,7 @@ options=(
 url="https://laravel.build/"
 with=""
 usage() {
-    echo -e "Laravel Build Script \e[32m@IvoKara/v0.0.3"
+    echo -e "Laravel Build Script \e[32m@IvoKara/v0.0.4"
     echo ""
     echo -e "\e[33mUsage:\e[0m"
     echo -e "  [command] [options] [arguments]"
@@ -68,12 +68,12 @@ name=$2
 if [ $# -eq 2 ] && [ -n "$cmd" ] && [ -n "$name" ]; then
     case $cmd in
     new)
-        echo "${url}${name}${with}"
-        # curl -s "${url}${name}${with}" | bash
+        # echo "${url}${name}${with}"
+        curl -s "${url}${name}${with}" | bash
         ;;
     devcontainer)
-        echo "${url}${name}${with}&devcontainer"
-        # curl -s "${url}${name}${with}&devcontainer" | bash
+        # echo "${url}${name}${with}&devcontainer"
+        curl -s "${url}${name}${with}&devcontainer" | bash
         ;;
     *)
         usage
