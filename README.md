@@ -5,8 +5,8 @@
 To start using the command line tool you will need to clone this repository and run the `install.sh` script
 
 ```bash
-git clone
-cd
+git clone https://github.com/IvoKara/laravel-sail-installer.git
+cd laravel-sail-installer
 ./install.sh
 ```
 
@@ -49,6 +49,6 @@ laravel new example-app --with="mysql,redis"
 
 You might also like to install a default [Devcontainer](https://laravel.com/docs/10.x/sail#using-devcontainers) 
 by typing `devcontainer` instead of the `new` keyword:
-```
+```bash
 laravel devcontainer example-app --with="mysql,redis"
 ```
