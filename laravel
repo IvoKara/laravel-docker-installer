@@ -34,7 +34,7 @@ usage() {
     exit 2
 }
 
-PARSED=$(getopt -n laravel -o w:h --long with:,help -- "$@")
+PARSED=$(getopt -o w:h --long with:,help "$@")
 VALID=$?
 if [ "$VALID" != "0" ]; then
     usage
@@ -68,12 +68,12 @@ name=$2
 if [ $# -eq 2 ] && [ -n "$cmd" ] && [ -n "$name" ]; then
     case $cmd in
     new)
-        # echo "${url}${name}${with}"
-        curl -s "${url}${name}${with}" | bash
+        echo "${url}${name}${with}"
+        # curl -s "${url}${name}${with}" | bash
         ;;
     devcontainer)
-        # echo "${url}${name}${with}&devcontainer"
-        curl -s "${url}${name}${with}&devcontainer" | bash
+        echo "${url}${name}${with}&devcontainer"
+        # curl -s "${url}${name}${with}&devcontainer" | bash
         ;;
     *)
         usage
