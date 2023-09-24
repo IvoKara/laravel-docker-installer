@@ -5,7 +5,7 @@ options={"mysql","pgsql","mariadb","redis","memcached","milisearch","minio","sel
 url="https://laravel.build/"
 with=""
 usage () {
-    echo -e "Laravel Build Script \e[32m@ivo/v0.0.3"
+    echo -e "Laravel Build Script \e[32m@IvoKara/v0.0.3"
     echo    ""
     echo -e "\e[33mUsage:\e[0m"
     echo -e "  command [options] [arguments]"
