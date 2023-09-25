@@ -2,7 +2,7 @@
 📥 Lightweight and simple Laravel + Sail project installer
 
 ## Setup
-To start using the command line tool you will need to clone this repository and run the `install.sh` script
+To start using the command line tool you will need to clone this repository and run the `setup.sh` script:
 
 ```bash
 git clone https://github.com/IvoKara/laravel-sail-installer.git
@@ -10,14 +10,17 @@ cd laravel-sail-installer
 ./setup.sh
 ```
 
-And you are now ready to go!
+This step copies the `laravel-sail-installer.sh` to your `~/.local/bin` directory 
+under the name `laravel` making it accessible for the _current user only_.
+
+If you prefer to make it accessible for the whole system you can manually move the 
+installer script to `/usr/local/bin` (root privileges needed).
+
+**After this you are ready to go!**
 
 ## Usage 
-The above scenario just copies the `laravel-sail-installer.sh` to your `usr/local/bin` directory 
-under the name `laravel` in order to be accessible in the whole system.
 
-
-To create your Laravel + Sail project simply type:
+To create your conteinerized Laravel project with Sail simply type:
 
 ```bash
 laravel new example-app
@@ -29,9 +32,18 @@ The Laravel application's directory will be created within the directory you exe
 
 
 ### Choose your sail service
-Additionally you can specify which of the services sail should include in your application.
-As per [Laravel's documentation](https://laravel.com/docs/10.x#choosing-your-sail-services) currently available services are
-`mysql`, `pgsql`, `mariadb`, `redis`, `memcached`, `meilisearch`, `minio`, `selenium`, and `mailpit`.
+Additionally you can specify which of the services should be included in your application.
+
+As per [Laravel's documentation](https://laravel.com/docs/10.x#choosing-your-sail-services) currently available services are:
+ * `mysql`
+ * `pgsql`
+ * `mariadb`
+ * `redis`
+ * `memcached`
+ * `meilisearch`
+ * `minio`
+ * `selenium`
+ * `mailpit`
 
 If you do not specyfy any of them the default configuration stack 
 will include `mysql`, `redis`, `meilisearch`, `mailpit`, and `selenium`.
@@ -45,7 +57,7 @@ or alternatively
 laravel new example-app --with="mysql,redis"
 ```
 
-> Disclamer: you can pass the `-w`\`--with` flag before or after the application's name
+> Disclamer: you can pass the `-w` or `--with` flag before or after the application's name
 
 You might also like to install a default [Devcontainer](https://laravel.com/docs/10.x/sail#using-devcontainers) 
 by typing `devcontainer` instead of the `new` keyword:
