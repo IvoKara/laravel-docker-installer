@@ -1,6 +1,6 @@
 # laravel-sail-installer
 📦 Revive the old `laravel new` syntax for project initialization
-while taking advantage Laravel's built-in containerizing solution Sail.
+while taking advantage of Laravel's built-in containerizing solution, a.k.a **Laravel Sail**.
 
 ## Setup
 To start using the command line tool you will need to clone this repository and run the `setup.sh` script:
