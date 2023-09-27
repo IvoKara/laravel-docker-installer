@@ -21,7 +21,7 @@ installer script to `/usr/local/bin` (root privileges needed).
 
 ## Usage 
 
-To create your conteinerized Laravel project with Sail simply type:
+To create your conteinerized Laravel project with **Laravel Sail** simply type:
 
 ```bash
 laravel new example-app
@@ -46,22 +46,22 @@ As per [Laravel's documentation](https://laravel.com/docs/10.x#choosing-your-sai
  * `selenium`
  * `mailpit`
 
-If you do not specyfy any of them the default configuration stack 
-will include `mysql`, `redis`, `meilisearch`, `mailpit`, and `selenium`.
+If you do not specify any of them explicitly, а default configuration stack 
+would include `mysql`, `redis`, `meilisearch`, `mailpit`, and `selenium`.
 
-For example you just need `mysql` and `redis` so you will need to type:
+For instance, if your application just needs `mysql` and `redis`, then you should type the following:
 ```bash
 laravel new example-app -w mysql,redis
 ```
-or alternatively
+or alternatively,
 ```bash
 laravel new example-app --with="mysql,redis"
 ```
 
-> Disclamer: you can pass the `-w` or `--with` flag before or after the application's name
+> Disclamer: you can pass the `-w` or `--with` option _before_ or _after_ the application's name.
 
 You might also like to install a default [Devcontainer](https://laravel.com/docs/10.x/sail#using-devcontainers) 
-by typing `devcontainer` instead of the `new` keyword:
+by replacing the `new` keyword with `devcontainer`:
 ```bash
 laravel devcontainer example-app --with="mysql,redis"
 ```
